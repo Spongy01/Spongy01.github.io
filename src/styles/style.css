@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+/* #carousel-items > div{
+    
+    border: 4px solid gray;
+
+    
+}  */
+#carousel-items > div > div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    width: 95%;
+    height:100%;
+    border-radius: 8px;
+    
+}
+
+.project-image{
+    height: 144px;
+
+}
+
+/* .project-tags > p {
+    background-color: #808080;
+    border: gray;
+    border-radius: 6px;
+    padding: 5px;
+} */
