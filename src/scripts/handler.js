@@ -12,9 +12,9 @@ const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const carouselItems = document.getElementById("carousel-items");
 const indicatorsContainer = document.getElementById("carousel-indicator");
-const indicators = indicatorsContainer.children;
+let indicators = indicatorsContainer.children;
 let totalSlides = 0
-let currentIndex = 0;
+let currentIndex = 0
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -168,7 +168,14 @@ function initializeCarouselNavigation() {
     indicator.dataset.index = i;
     indicatorsContainer.appendChild(indicator);
   }
-
+  indicators = indicatorsContainer.children;
+  console.log("Indicators: "+ indicators)
+  Array.from(indicators).forEach((indicator) => {
+    indicator.addEventListener("click", () => {
+      currentIndex = parseInt(indicator.dataset.index);
+      updateCarousel();
+    });
+  });
   
   indicators[currentIndex].classList.add("bg-teal-800");
   carouselItem = document.getElementById("carousel-item");
@@ -197,12 +204,7 @@ nextButton.addEventListener("click", () => {
   updateCarousel();
 });
 
-Array.from(indicators).forEach((indicator) => {
-  indicator.addEventListener("click", () => {
-    currentIndex = parseInt(indicator.dataset.index);
-    updateCarousel();
-  });
-});
+
 
 window.addEventListener("resize", updateCarousel);
 
