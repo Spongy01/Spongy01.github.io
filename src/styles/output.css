@@ -1195,6 +1195,10 @@ input:checked + .toggle-bg {
   margin-right: 0.5rem;
 }
 
+.ms-2 {
+  margin-inline-start: 0.5rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -1209,14 +1213,6 @@ input:checked + .toggle-bg {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ms-2 {
-  margin-inline-start: 0.5rem;
-}
-
-.ms-10 {
-  margin-inline-start: 2.5rem;
 }
 
 .block {
@@ -1814,16 +1810,6 @@ input:checked + .toggle-bg {
   background-color: rgb(194 120 3 / var(--tw-bg-opacity));
 }
 
-.bg-teal-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(126 220 226 / var(--tw-bg-opacity));
-}
-
-.bg-teal-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 102 114 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -2163,11 +2149,6 @@ input:checked + .toggle-bg {
   color: rgb(114 59 19 / var(--tw-text-opacity));
 }
 
-.text-teal-300 {
-  --tw-text-opacity: 1;
-  color: rgb(126 220 226 / var(--tw-text-opacity));
-}
-
 .opacity-0 {
   opacity: 0;
 }
@@ -2355,16 +2336,6 @@ html {
 .hover\:shadow-teal-500\/20:hover {
   --tw-shadow-color: rgb(6 148 162 / 0.2);
   --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:after\:content-\[url\(assets\/icons8-link-50\.png\)\]:hover::after {
-  --tw-content: url(assets/icons8-link-50.png);
-  content: var(--tw-content);
-}
-
-.hover\:after\:content-link:hover::after {
-  --tw-content: url("/assets/link.svg");
-  content: var(--tw-content);
 }
 
 .focus\:border-teal-500:focus {
