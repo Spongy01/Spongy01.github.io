@@ -1,0 +1,56 @@
+[
+    {
+        "title": "InterConnectX ",
+        "link":"https://github.com/Spongy01/InterConnectX",
+        "image": "assets/InterConnectX Image.png",
+        "tags": [
+            "Revamping",
+            "Collaboration",
+            "Hackathon"
+        ],
+        "description": " A backend middleware application designed to power bi-directional integration between systems supporting REST and SOAP communication. InterConnectX handles data transformation, security, and protocol compatibility, eliminating the need for complex custom integrations. By acting as a bridge, it enables seamless communication and efficient data exchange between REST and SOAP systems, ensuring compatibility through data format transformation and mapping."
+    },
+    {
+        "title": "Excel Trader",
+        "link":"https://github.com/Spongy01/Excel-Trader",        
+        "image": "assets/Excel Trader.jpeg",
+        "tags": [
+            "Ongoing"
+        ],
+        "description": " Excel Trader is designed to streamline and speed up trading by integrating trading APIs directly into an Excel application. This tool allows for quick order placements, modifications, and other trading actions without navigating through cluttered broker interfaces. It focuses on showing only necessary things in Excel to make trading easy and fast. Currently, I am working towards live market data integration to provide a comprehensive one-stop trading solution."
+    },
+    {
+        "title": "Question Paper Generator",
+        "link":"https://github.com/Spongy01/Question-Paper-Generator",     
+        "image": "assets/Question Paper Generator.png",
+        "tags": [
+            "Completed" 
+        ],
+        "description" : "The Question Paper Generator, a Node.js application, automates exam paper creation based on user inputs like total marks and difficulty distribution. Developed while exploring Node.js, I focused on creating modular, well-documented, and thoroughly tested code. It supports flexible criteria integration and generates papers from a diverse question bank, catering to various educational needs."
+    },
+    {
+        "title": "Humour Detector",
+        "link":"https://github.com/Spongy01/Humour-Detection",   
+        "image": "assets/Humour Detector.png",
+        "tags": [
+            "Completed" 
+        ],
+        "description" : "A Web App that uses Machine Learning Algorithms along with Natural Language Processing Techniques such as Bag of Words, TF-IDF, Word2Vec to detect Humour in text."
+    }
+    ,
+    {
+        "title": "DataSets",
+        "link":"https://github.com/Spongy01/DataSets",   
+        "image": "assets/DataSets.png",
+        "tags": [
+            "Completed" 
+        ],
+        "description" : "DataSets is a Django-powered web app enabling users to create and manage custom datasets akin to traditional DBMS tables. It features user management, email-based account activation, and a hierarchical storage system for organizing directories and favoriting datasets. Designed for accessibility and efficiency, DataSets streamlines data management with a user-friendly interface and robust backend functionality."
+    }
+
+
+
+
+    
+]
+
