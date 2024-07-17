@@ -19,7 +19,7 @@ let currentIndex = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Inside event listener");
-  fetch("scripts/projects.json")
+  fetch("src/scripts/projects.json")
     .then((response) => response.json())
     .then((projects) => {
       const carouselItems = document.getElementById("carousel-items");

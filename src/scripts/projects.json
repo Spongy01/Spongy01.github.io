@@ -2,7 +2,7 @@
     {
         "title": "InterConnectX ",
         "link":"https://github.com/Spongy01/InterConnectX",
-        "image": "assets/InterConnectX Image.png",
+        "image": "./src/assets/InterConnectX Image.png",
         "tags": [
             "Revamping",
             "Collaboration",
@@ -13,7 +13,7 @@
     {
         "title": "Excel Trader",
         "link":"https://github.com/Spongy01/Excel-Trader",        
-        "image": "assets/Excel Trader.jpeg",
+        "image": "./src/assets/Excel Trader.jpeg",
         "tags": [
             "Ongoing"
         ],
@@ -22,7 +22,7 @@
     {
         "title": "Question Paper Generator",
         "link":"https://github.com/Spongy01/Question-Paper-Generator",     
-        "image": "assets/Question Paper Generator.png",
+        "image": "./src/assets/Question Paper Generator.png",
         "tags": [
             "Completed" 
         ],
@@ -31,7 +31,7 @@
     {
         "title": "Humour Detector",
         "link":"https://github.com/Spongy01/Humour-Detection",   
-        "image": "assets/Humour Detector.png",
+        "image": "./src/assets/Humour Detector.png",
         "tags": [
             "Completed" 
         ],
@@ -41,7 +41,7 @@
     {
         "title": "DataSets",
         "link":"https://github.com/Spongy01/DataSets",   
-        "image": "assets/DataSets.png",
+        "image": "./src/assets/DataSets.png",
         "tags": [
             "Completed" 
         ],
