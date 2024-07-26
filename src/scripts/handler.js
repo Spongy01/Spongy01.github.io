@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
             </div>
             <div class="w-full h-0.5 bg-slate-500 my-2"></div>
-            <div class="text-justify indent-6 project-description px-4 py-2 text-gray-700">
+            <div class="text-justify indent-6 leading-snug project-description px-4 py-2 text-gray-700">
             ${project.description}
             </div>
             <div
