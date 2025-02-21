@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b; /* Dark blue background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0d9488; /* Teal color for the thumb */
+  border-radius: 0; /* Remove border radius for a more bar-like appearance */
+}
+
+/* Scrollbar as progress bar */
+body {
+  scrollbar-color: #0d9488 #1e293b; /* For Firefox */
+  scrollbar-width: thin; /* For Firefox */
+}
+
+/* Add smooth scrolling to the body */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #0f172a; /* Darker background for dark mode */
+  }
+}
+
