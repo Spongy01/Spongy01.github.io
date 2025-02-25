@@ -8,6 +8,13 @@ import { Github, ChevronLeft, ChevronRight } from "lucide-react"
 export default function Projects() {
   const projects = [
     {
+      "title": "SpotiFind Rx",
+      "description": "An AI-powered navigation aid for the visually impaired, featuring real-time object detection, depth mapping, and multilingual assistance. It integrates prescription OCR and intelligent medication verification for enhanced accessibility and safety.",
+      "technologies": ["YOLO v12", "Gemini", "Depth Anything", "Hugging Face", "MongoDB Atlas", "Next.js"],
+      "image": "/placeholder.svg?height=200&width=300",
+      "github": "https://github.com/nimit/hopperHacks"
+    },
+    {
       "title": "BrokeNoMore!",
       "description": "An AI-driven financial management web app that helps users track and manage expenses. It leverages Conversational AI and RAG to provide personalized financial insights based on user-specific spending patterns.",
       "technologies": ["LangChain", "Gemini","RAG", "FAISS", "React", "Next.js", "Flask"],
