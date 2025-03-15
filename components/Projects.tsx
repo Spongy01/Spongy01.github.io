@@ -7,7 +7,7 @@ import { Github, ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function Projects() {
   const projects = [
-    {
+    { 
       "title": "SpotiFind Rx",
       "description": "An AI-powered navigation aid for the visually impaired, featuring real-time object detection, depth mapping, and multilingual assistance. It integrates prescription OCR and intelligent medication verification for enhanced accessibility and safety.",
       "technologies": ["YOLO v12", "Gemini", "Depth Anything", "Hugging Face", "MongoDB Atlas", "Next.js"],

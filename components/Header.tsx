@@ -66,7 +66,7 @@ export default function Header() {
             </Link>
           ))}
           <motion.a
-            href="https://drive.google.com/file/d/1XuG-zdhuKslsXRpWaBkC9gHS2mNu2YnE/view?usp=drive_link" // Replace with your actual resume link
+            href="https://drive.google.com/file/d/1RTuqZ4yp7t8cLg8RVaBvwuS17cNGtdd6/view?usp=sharing" // Replace with your actual resume link
             target="_blank"
             rel="noopener noreferrer"
             className="bg-soft-teal-600 hover:bg-soft-teal-700 text-white px-4 py-2 rounded-full transition duration-300"
