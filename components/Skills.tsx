@@ -4,12 +4,11 @@ import { motion } from "framer-motion"
 
 export default function Skills() {
   const skills = [
-    { "category": "Programming Languages", "items": ["Python", "Java", "C++", "C", "JavaScript", "SQL"] },
-    { "category": "Machine Learning & AI", "items": ["Scikit-Learn", "TensorFlow", "PyTorch", "Keras", "NLP", "Transformers", "LLMs", "RAG", "LangChain", "FAISS"] },
-    { "category": "Data Science & Analytics", "items": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Tableau"] },
+    { "category": "Programming Languages", "items": ["Python (primary)", "Java", "C++", "JavaScript", "SQL"] },
+    { "category": "Machine Learning & AI", "items": ["TensorFlow", "PyTorch", "NLP", "Transformers", "LLMs", "RAG", "LangChain", "FAISS", "Weaviate"] },
+    { "category": "MLOPS & Deployment", "items": ["AWS", "GCP", "Docker", "Kubernetes", "FastAPI", "CI/CD", "Git", "Github Actions"] },
     { "category": "Databases", "items": ["MySQL", "MongoDB", "Firebase"] },
-    { "category": "DevOps & Tools", "items": ["Git", "GitHub", "Docker"] },
-    { "category": "Web Development", "items": ["React", "Next.js", "HTML", "CSS", "TailwindCSS", "Node.js", "Express.js", "Flask", "Django"] }
+    { "category": "Data Handling", "items": ["Pandas", "Numpy", "Matplotlib", "Seaborn"] }
   ]
 
   return (

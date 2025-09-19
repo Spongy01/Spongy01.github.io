@@ -16,28 +16,28 @@ export default function AboutMe() {
         <h2 className="text-4xl font-bold mb-8 text-soft-teal-800">About Me</h2>
         <div className="space-y-4 text-gray-700">
           <p className="text-lg">
-            Hello! Hey there! I'm Ali Asgar Padaria, a passionate graduate student at Stony Brook University pursuing 
-            my M.S. in Computer Science. My journey in tech started with a B.Tech in Computer Science from Nirma University, 
-            where I built a strong foundation in software development and machine learning.
+            Hello! I'm Ali Asgar, a graduate student at Stony Brook University pursuing an M.S. in Computer Science. 
+            Alongside my studies, I work as an LLM/AI Engineer Intern at Zeblok Computational Inc., where I develop 
+            AI-powered solutions and work on cutting-edge projects. I completed my B.Tech in Computer Science from 
+            Nirma University in 2024.
           </p>
           <p className="text-lg">
-          Currently, I'm diving deep into NLP and Large Language Models (LLMs), exploring how AI can revolutionize 
-          human-computer interaction. I've worked on projects ranging from an AI-driven financial management system 
-          to a real-time horse racing probability model and a miniGPT implementation for text generation. 
-          Alongside my AI and ML projects, I also enjoy building software solutions, 
-          some of which you'll find in the projects section below.
+          My interests lie in NLP and Large Language Models (LLMs), exploring how AI can transform human-computer 
+          interaction. I’ve worked on projects ranging from building an AI-driven financial management system to 
+          developing a real-time horse racing probability model and implementing a miniGPT for text generation. 
+          Beyond AI/ML, I enjoy creating software solutions, some of which you can explore in the projects section below.
           </p>
           <p className="text-lg">
-          Previously, I interned at Johnson Controls - Hitachi, where I engineered a Bluetooth ecosystem for smart AC control, 
-          significantly improving communication efficiency. 
+          Previously, I interned at Johnson Controls - Hitachi, where I engineered a Bluetooth ecosystem for smart AC control
+          that significantly improved communication efficiency. 
           </p>
           <p className="text-lg">
-          When I’m not coding, you can find me buried in a book, exploring new ideas, or getting lost in a video game. 
-          I love the thrill of learning something new—whether it’s a complex AI concept or just a random fact that sparks 
+          When I’m not coding, you can find me buried in fiction, exploring new ideas, or getting lost in a video game. 
+          I love the thrill of learning something new—whether it’s a complex technical concept or just a random fact that sparks 
           curiosity!
           </p>
           <p className="text-lg">
-          I'm always eager to learn, build, and collaborate on cutting-edge AI and ML projects. 
+          I'm always eager to learn, build, and collaborate on AI and ML projects. 
           If you're as excited about AI as I am, let's connect!  
           </p>
         </div>

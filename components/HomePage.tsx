@@ -27,15 +27,17 @@ export default function HomePage() {
           >
             <TypeAnimation
               sequence={[
+                "LLM/AI Engineer Intern @ Zeblok Computational Inc.",
+                2000,
                 "Comp Sci Student @ Stony Brook University",
                 2000,
                 "Exploring NLP & Large Language Models",
                 2000,
                 "Building Intelligent AI Systems",
                 2000,
-                "I like RAG!!!",
+                "I like LLMS!",
                 2000,
-                "Passionate About Machine Learning & Data Science",
+                "Passionate About Machine Learning and Artificial Intelligence",
                 2000,
                 "Excited to share my knowledge with others!",
                 2000,
