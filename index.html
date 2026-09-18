@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ali Asgar Padaria</title>
+  <meta name="description" content="Ali Asgar Padaria is an AI engineer working on agentic systems, LLM infrastructure, and fine-tuning.">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-name" href="#top">Ali Asgar Padaria</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <div class="page">
+
+    <aside class="rail rail--note" aria-labelledby="note-title">
+      <div class="rail__inner">
+        <p class="note__title" id="note-title">Currently</p>
+        <!-- Edit this note: what you are exploring or working on right now. -->
+        <p class="note__body">Working on evaluation for tool-calling agents: how to tell whether the planner chose the right tool for the right reason, not just whether the final answer looked plausible.</p>
+        <p class="note__body">Also reading about speculative decoding and what it does to time-to-first-token on small open models.</p>
+      </div>
+    </aside>
+
+    <main class="site-main" id="main">
+
+      <section class="hero" aria-labelledby="hero-name">
+        <div class="hero__text">
+          <h1 class="hero__name" id="hero-name">Ali Asgar Padaria</h1>
+          <p class="hero__tagline">AI engineer building agentic systems and the infrastructure that keeps language models fast, observable, and useful.</p>
+        </div>
+        <figure class="hero__portrait">
+          <img src="assets/pfp.jpeg" alt="Ali Asgar Padaria mid-sentence while presenting, gesturing with one hand" width="999" height="1163">
+        </figure>
+      </section>
+
+      <p class="about" id="about">I build the plumbing that makes language models useful in production: agents that call tools reliably, gateways that keep them fast and observable, and fine-tuning pipelines for when the base model is not enough. Most recently I worked with Zeblok Computational through CEWIT at Stony Brook University, shipping an MCP-based agent and its retrieval stack. I care about the boring parts, such as rate limits, tracing, and evaluation, because that is where most systems quietly fail.</p>
+
+      <section class="section reveal" id="experience" aria-labelledby="experience-heading">
+        <h2 class="section__heading" id="experience-heading">Experience</h2>
+
+        <article class="role">
+          <div class="role__meta">
+            <p>June to August 2025</p>
+            <p>Remote, USA</p>
+          </div>
+          <div class="role__body">
+            <h3 class="role__title">Senior Research Aide, AI Engineer for Agentic Systems</h3>
+            <p class="role__org">CEWIT at Stony Brook University, for the client Zeblok Computational</p>
+            <ul class="role__points">
+              <li>Built an agent with MCP-based tool-calling capabilities, deployed via a high-concurrency Flask API with SSE streaming, achieving sub-200ms time-to-first-token on open-source LLMs.</li>
+              <li>Engineered modular MCP tool servers as reusable agent building blocks, enabling seamless integration of RAG, web search, and programmatic control of Zeblok's AI-MicroCloud platform, increasing system extensibility.</li>
+              <li>Improved top-K retrieval accuracy by 20% on held-out data by replacing fixed-size chunking with a hybrid chunking strategy in a multimodal retrieval pipeline that pulls context from PDFs and webpages, and increased answer coverage by adding synthetic QA pair generation.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <h2 class="section__heading" id="projects-heading">Projects</h2>
+
+        <!-- Conduit -->
+        <article class="project reveal" aria-labelledby="project-conduit">
+          <div class="project__visual">
+            <svg class="diagram" viewBox="0 0 320 224" role="img" aria-labelledby="conduit-diagram-title">
+              <title id="conduit-diagram-title">Clients send requests through Conduit, which rate limits, routes, and traces them before forwarding to OpenAI, Anthropic, or Ollama, with metrics flowing to Prometheus and Grafana.</title>
+              <defs>
+                <marker id="arrow-conduit" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 0.5 L7.5 4 L0 7.5 Z"/>
+                </marker>
+              </defs>
+              <!-- clients -->
+              <rect class="stroke" x="8" y="94" width="60" height="34" rx="2"/>
+              <text class="label" x="38" y="115" text-anchor="middle">Clients</text>
+              <line class="stroke" x1="68" y1="111" x2="104" y2="111" marker-end="url(#arrow-conduit)"/>
+              <!-- gateway -->
+              <rect class="stroke--accent" x="106" y="46" width="108" height="130" rx="3"/>
+              <text class="label--strong" x="160" y="68" text-anchor="middle" font-size="12">Conduit</text>
+              <line class="stroke" x1="120" y1="80" x2="200" y2="80" opacity="0.4"/>
+              <text class="label" x="160" y="102" text-anchor="middle">rate limit</text>
+              <text class="label--muted" x="160" y="113" text-anchor="middle">Redis, Lua</text>
+              <text class="label" x="160" y="134" text-anchor="middle">route and fall back</text>
+              <text class="label" x="160" y="158" text-anchor="middle">trace</text>
+              <text class="label--muted" x="160" y="169" text-anchor="middle">22 spans per request</text>
+              <!-- providers -->
+              <line class="stroke" x1="214" y1="111" x2="244" y2="67" marker-end="url(#arrow-conduit)"/>
+              <line class="stroke" x1="214" y1="111" x2="244" y2="111" marker-end="url(#arrow-conduit)"/>
+              <line class="stroke" x1="214" y1="111" x2="244" y2="155" marker-end="url(#arrow-conduit)"/>
+              <rect class="stroke" x="246" y="52" width="66" height="30" rx="2"/>
+              <text class="label" x="279" y="71" text-anchor="middle">OpenAI</text>
+              <rect class="stroke" x="246" y="96" width="66" height="30" rx="2"/>
+              <text class="label" x="279" y="115" text-anchor="middle">Anthropic</text>
+              <rect class="stroke" x="246" y="140" width="66" height="30" rx="2"/>
+              <text class="label" x="279" y="159" text-anchor="middle">Ollama</text>
+              <!-- observability tap -->
+              <line class="stroke--dashed" x1="160" y1="176" x2="160" y2="196"/>
+              <rect class="fill--surface" x="98" y="196" width="124" height="24" rx="2"/>
+              <text class="label--muted" x="160" y="211" text-anchor="middle">Prometheus, Grafana</text>
+            </svg>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title" id="project-conduit">Conduit</h3>
+            <p class="project__stack">Python, FastAPI, Redis, PostgreSQL, OpenTelemetry, Prometheus, Grafana, Docker</p>
+            <p class="project__desc">A production-grade LLM API gateway supporting OpenAI, Anthropic, and Ollama, sustaining 100 RPS with under 2ms p95 overhead, distributed Redis-Lua rate limiting with zero quota leakage under load, and a full observability stack (12 custom Prometheus metrics, OpenTelemetry tracing with 22 spans per request) visualized in Grafana.</p>
+            <p class="project__links">
+              <a href="https://github.com/Spongy01/Conduit">GitHub repository</a>
+              <a href="projects/conduit.html">Read more</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- BrokeNoMore -->
+        <article class="project reveal" aria-labelledby="project-brokenomore">
+          <div class="project__visual">
+            <svg class="diagram" viewBox="0 0 320 224" role="img" aria-labelledby="brokenomore-diagram-title">
+              <title id="brokenomore-diagram-title">A user talks to an agent with multi-turn memory. The agent routes to six financial tools and a sandboxed Text-to-SQL path, and every step is traced in Langfuse.</title>
+              <defs>
+                <marker id="arrow-bnm" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 0.5 L7.5 4 L0 7.5 Z"/>
+                </marker>
+              </defs>
+              <!-- user -->
+              <rect class="stroke" x="8" y="86" width="56" height="34" rx="2"/>
+              <text class="label" x="36" y="107" text-anchor="middle">User</text>
+              <line class="stroke" x1="64" y1="103" x2="106" y2="103" marker-end="url(#arrow-bnm)"/>
+              <!-- agent with memory ring -->
+              <circle class="stroke--dashed" cx="142" cy="103" r="40"/>
+              <circle class="stroke--accent" cx="142" cy="103" r="30"/>
+              <text class="label--strong" x="142" y="100" text-anchor="middle" font-size="12">Agent</text>
+              <text class="label--muted" x="142" y="112" text-anchor="middle">router</text>
+              <text class="label--muted" x="142" y="24" text-anchor="middle">Langfuse traces</text>
+              <line class="stroke--dashed" x1="142" y1="30" x2="142" y2="62"/>
+              <text class="label--muted" x="134" y="160" text-anchor="middle">memory across sessions</text>
+              <!-- tools group -->
+              <line class="stroke" x1="182" y1="96" x2="212" y2="72" marker-end="url(#arrow-bnm)"/>
+              <rect class="stroke" x="214" y="14" width="98" height="116" rx="3"/>
+              <text class="label" x="263" y="32" text-anchor="middle">six financial tools</text>
+              <circle class="stroke" cx="242" cy="58" r="9"/>
+              <circle class="stroke" cx="284" cy="58" r="9"/>
+              <circle class="stroke" cx="242" cy="86" r="9"/>
+              <circle class="stroke" cx="284" cy="86" r="9"/>
+              <circle class="stroke" cx="242" cy="114" r="9"/>
+              <circle class="stroke" cx="284" cy="114" r="9"/>
+              <!-- sql sandbox -->
+              <line class="stroke" x1="182" y1="110" x2="200" y2="164" marker-end="url(#arrow-bnm)"/>
+              <rect class="stroke--accent" x="202" y="146" width="110" height="62" rx="3"/>
+              <text class="label" x="257" y="166" text-anchor="middle">Text-to-SQL sandbox</text>
+              <text class="label--muted" x="257" y="182" text-anchor="middle">bound to user id</text>
+              <text class="label--muted" x="257" y="196" text-anchor="middle">SQL allowlist</text>
+            </svg>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title" id="project-brokenomore">BrokeNoMore</h3>
+            <p class="project__stack">Python, Function Calling, FastAPI, Langfuse, Text-to-SQL, SQLAlchemy, React.js</p>
+            <p class="project__desc">A personal-finance agent routing complex queries across six specialized financial tools and a secure Text-to-SQL sandbox, with multi-turn memory across sessions, hardened against injection via server-side user-id binding and SQL allowlists, and Langfuse-based telemetry that helped raise routing precision from 40% to 90%.</p>
+            <p class="project__links">
+              <a href="https://github.com/Spongy01/BrokeNoMore">GitHub repository</a>
+              <a href="projects/brokenomore.html">Read more</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Cardiology LLM fine-tuning -->
+        <article class="project reveal" aria-labelledby="project-cardiology">
+          <div class="project__visual">
+            <svg class="diagram" viewBox="0 0 320 224" role="img" aria-labelledby="cardiology-diagram-title">
+              <title id="cardiology-diagram-title">Phi-3.5-mini in 4-bit is fine-tuned with QLoRA across a sweep of twelve adapter configurations; the best one lifts Top-2 accuracy by 2.6 points and cuts positional bias to 2.7 percent.</title>
+              <defs>
+                <marker id="arrow-cardio" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 0.5 L7.5 4 L0 7.5 Z"/>
+                </marker>
+              </defs>
+              <!-- base model -->
+              <rect class="stroke" x="8" y="82" width="82" height="60" rx="2"/>
+              <text class="label--strong" x="49" y="106" text-anchor="middle" font-size="12">Phi-3.5-mini</text>
+              <text class="label--muted" x="49" y="121" text-anchor="middle">3.8B, 4-bit QLoRA</text>
+              <line class="stroke" x1="90" y1="112" x2="108" y2="112" marker-end="url(#arrow-cardio)"/>
+              <!-- adapter sweep grid: 4 x 3, one chosen -->
+              <text class="label" x="163" y="60" text-anchor="middle">12 adapter configurations</text>
+              <g class="stroke">
+                <rect x="110" y="72" width="22" height="22" rx="2"/>
+                <rect x="138" y="72" width="22" height="22" rx="2"/>
+                <rect x="166" y="72" width="22" height="22" rx="2"/>
+                <rect x="194" y="72" width="22" height="22" rx="2"/>
+                <rect x="110" y="100" width="22" height="22" rx="2"/>
+                <rect x="138" y="100" width="22" height="22" rx="2"/>
+                <rect x="194" y="100" width="22" height="22" rx="2"/>
+                <rect x="110" y="128" width="22" height="22" rx="2"/>
+                <rect x="138" y="128" width="22" height="22" rx="2"/>
+                <rect x="166" y="128" width="22" height="22" rx="2"/>
+                <rect x="194" y="128" width="22" height="22" rx="2"/>
+              </g>
+              <rect class="fill--accent" x="166" y="100" width="22" height="22" rx="2"/>
+              <text class="label--muted" x="163" y="170" text-anchor="middle">2,000 cardiology MCQs, chain-of-thought supervision</text>
+              <!-- result -->
+              <line class="stroke" x1="218" y1="112" x2="234" y2="112" marker-end="url(#arrow-cardio)"/>
+              <rect class="stroke--accent" x="236" y="82" width="76" height="60" rx="2"/>
+              <text class="label--strong" x="274" y="103" text-anchor="middle" font-size="12">+2.6 pts</text>
+              <text class="label--muted" x="274" y="117" text-anchor="middle">Top-2 accuracy</text>
+              <text class="label--muted" x="274" y="131" text-anchor="middle">bias 2.7%</text>
+            </svg>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title" id="project-cardiology">Cardiology LLM Fine-Tuning</h3>
+            <p class="project__stack">QLoRA, TRL, PEFT, Hugging Face, BitsAndBytes, PyTorch</p>
+            <p class="project__desc">Fine-tuned Microsoft Phi-3.5-mini (3.8B) on 2,000 cardiology MCQs using 4-bit QLoRA with chain-of-thought rationale supervision, evaluated across 12 adapter configurations to find a setup yielding a +2.6% increase in Top-2 accuracy and reduced positional bias from 7.3% to 2.7%.</p>
+            <p class="project__links">
+              <a href="https://github.com/Spongy01/Cardiology-QA">GitHub repository</a>
+              <a href="projects/cardiology-qa.html">Read more</a>
+            </p>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <footer class="rail rail--handles" aria-label="Contact">
+      <div class="rail__inner">
+        <a class="handle" href="https://www.linkedin.com/in/aliasgarpadaria" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+          </svg>
+        </a>
+        <a class="handle" href="mailto:aliasgarpadaria002@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="M3.5 7l8.5 6 8.5-6"/>
+          </svg>
+        </a>
+        <a class="handle" href="https://github.com/Spongy01" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
