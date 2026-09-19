@@ -255,7 +255,6 @@ a:hover { color: var(--accent); }
 
 .about {
   margin-top: 3rem;
-  max-width: var(--prose);
   font-size: 1.125rem;
   line-height: 1.6;
   text-wrap: pretty;
