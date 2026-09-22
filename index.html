@@ -31,6 +31,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
@@ -49,6 +50,11 @@
 
     <aside class="rail rail--note" aria-labelledby="note-title">
       <div class="rail__inner">
+        <p class="rail__actions">
+          <a class="button" href="assets/ali-asgar-padaria-resume.pdf" target="_blank" rel="noopener">View resume</a>
+          <a href="assets/ali-asgar-padaria-resume.pdf" download="Ali-Asgar-Padaria-resume.pdf">Download PDF</a>
+        </p>
+
         <p class="note__title" id="note-title">Currently</p>
         <!-- Edit this note: what you are exploring or working on right now. -->
         <p class="note__body">Building an inference engine for fast LLM serving, in the spirit of vLLM: paged KV cache, continuous batching, and a scheduler that keeps the GPU busy without starving latency-sensitive requests.</p>
@@ -86,6 +92,34 @@
               <li>Engineered modular MCP tool servers as reusable agent building blocks, enabling seamless integration of RAG, web search, and programmatic control of Zeblok's AI-MicroCloud platform, increasing system extensibility.</li>
               <li>Improved top-K retrieval accuracy by 20% on held-out data by replacing fixed-size chunking with a hybrid chunking strategy in a multimodal retrieval pipeline that pulls context from PDFs and webpages, and increased answer coverage by adding synthetic QA pair generation.</li>
             </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="section reveal" id="education" aria-labelledby="education-heading">
+        <h2 class="section__heading" id="education-heading">Education</h2>
+
+        <article class="role">
+          <div class="role__meta">
+            <p>August 2024 to May 2026</p>
+            <p>Stony Brook, New York</p>
+          </div>
+          <div class="role__body">
+            <h3 class="role__title">M.S. in Computer Science</h3>
+            <p class="role__org">Stony Brook University</p>
+            <p class="role__org">GPA 3.97 on a 4.0 scale</p>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role__meta">
+            <p>October 2020 to May 2024</p>
+            <p>Ahmedabad, India</p>
+          </div>
+          <div class="role__body">
+            <h3 class="role__title">B.Tech in Computer Science and Engineering</h3>
+            <p class="role__org">Nirma University</p>
+            <p class="role__org">GPA 8.8 on a 10 scale</p>
           </div>
         </article>
       </section>
@@ -444,22 +478,48 @@
 
     <footer class="rail rail--handles" aria-label="Contact">
       <div class="rail__inner">
-        <a class="handle" href="https://www.linkedin.com/in/aliasgarpadaria" aria-label="LinkedIn">
+        <a class="handle" href="https://www.linkedin.com/in/aliasgarpadaria">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
           </svg>
+          <span class="handle__label">LinkedIn</span>
         </a>
-        <a class="handle" href="mailto:aliasgarpadaria002@gmail.com" aria-label="Email">
+        <a class="handle" href="mailto:aliasgarpadaria002@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2"/>
             <path d="M3.5 7l8.5 6 8.5-6"/>
           </svg>
+          <span class="handle__label">Email</span>
         </a>
-        <a class="handle" href="https://github.com/Spongy01" aria-label="GitHub">
+        <a class="handle" href="https://scholar.google.com/citations?user=1A_lT5IAAAAJ">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3.2 1.8 8 12 12.8 22.2 8z"/>
+            <path d="M6.2 10.3v4.2c0 1.8 2.6 3.1 5.8 3.1s5.8-1.3 5.8-3.1v-4.2"/>
+            <path d="M21.4 8.4v5"/>
+          </svg>
+          <span class="handle__label">Google Scholar</span>
+        </a>
+        <a class="handle" href="https://github.com/Spongy01">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/>
           </svg>
+          <span class="handle__label">GitHub</span>
         </a>
+
+        <div class="rail__papers">
+          <p class="note__title">Selected papers</p>
+          <ul class="papers">
+            <li>
+              <a href="https://ieeexplore.ieee.org/document/10373843/">Securing the future: a comprehensive review of security challenges and solutions in advanced driver assistance systems</a>
+              <span class="papers__meta">IEEE Access, 2023. 76 citations.</span>
+            </li>
+            <li>
+              <a href="https://ieeexplore.ieee.org/document/10288388/">Traffic sign classification for autonomous vehicles using split and federated learning underlying 5G</a>
+              <span class="papers__meta">IEEE Open Journal of Vehicular Technology, 2023. First author.</span>
+            </li>
+          </ul>
+          <p class="papers__all"><a href="https://scholar.google.com/citations?user=1A_lT5IAAAAJ">All papers on Google Scholar</a></p>
+        </div>
       </div>
     </footer>
 
