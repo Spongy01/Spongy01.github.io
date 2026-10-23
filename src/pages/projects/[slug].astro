@@ -13,7 +13,10 @@ const { project } = Astro.props as { project: Project };
   description={`${project.name}, a project by Ali Asgar Padaria.`}
   root="../"
   brandHref="../index.html"
-  nav={[{ label: 'Projects', href: '../index.html#projects' }]}
+  nav={[
+    { label: 'Projects', href: '../index.html#projects' },
+    { label: 'Blog', href: '/blog/' },
+  ]}
 >
     <main class="site-main" id="main">
       <section class="placeholder" aria-labelledby="project-title">

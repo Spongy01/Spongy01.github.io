@@ -1,0 +1,191 @@
+/* ------------------------------------------------------------------
+   Blog: list page and posts. Loaded only on /blog pages, on top of
+   styles.css, and built from the same tokens.
+------------------------------------------------------------------ */
+
+/* Intro ----------------------------------------------------------- */
+.blog-intro { max-width: var(--prose); }
+.blog-intro__title,
+.post__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144, "SOFT" 70, "WONK" 1;
+  text-wrap: balance;
+}
+.blog-intro__lede {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+/* Post list ------------------------------------------------------- */
+.post-list {
+  margin: 4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.post-item {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+}
+.post-item:last-child { border-bottom: 1px solid var(--rule); }
+.post-item__date {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+.post-item__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-variation-settings: "opsz" 60, "SOFT" 40;
+  text-wrap: balance;
+}
+.post-item__title a { text-decoration: none; }
+.post-item__title a:hover { text-decoration: underline; }
+.post-item__desc {
+  margin-top: 0.6rem;
+  max-width: var(--prose);
+  text-wrap: pretty;
+}
+.post-list__empty { margin-top: 3rem; color: var(--muted); }
+
+/* Tags ------------------------------------------------------------ */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+.tag {
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* Post ------------------------------------------------------------ */
+.post__header { max-width: var(--prose); }
+.post__back {
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
+}
+.post__back a::before { content: "\2190\00a0"; }
+.post__meta {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+.post__draft {
+  padding: 0.05rem 0.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Prose: styles.css resets margins and list styles, so restore them here. */
+.prose {
+  margin-top: 3rem;
+  max-width: var(--prose);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+.prose > * + * { margin-top: 1.25rem; }
+.prose p,
+.prose li { text-wrap: pretty; }
+.prose h2,
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.prose h2 {
+  margin-top: 3rem;
+  font-size: 1.75rem;
+  font-variation-settings: "opsz" 72, "SOFT" 50;
+}
+.prose h3 {
+  margin-top: 2.25rem;
+  font-size: 1.3rem;
+  font-variation-settings: "opsz" 48, "SOFT" 40;
+}
+.prose ul,
+.prose ol { padding-left: 1.4rem; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li + li { margin-top: 0.4rem; }
+.prose li::marker { color: var(--accent); }
+.prose blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-style: italic;
+}
+.prose hr {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+.prose img { border-radius: 3px; }
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+}
+.prose :not(pre) > code {
+  padding: 0.1em 0.35em;
+  background: var(--surface);
+  border-radius: 3px;
+}
+.prose pre {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  /* Shiki sets an inline background; the site surface fits the paper better. */
+  background-color: var(--surface) !important;
+}
+.prose pre code { font-size: inherit; }
+
+/* Syntax colours: Shiki emits --shiki-light / --shiki-dark on each token.
+   Follow the same three theme states as styles.css. */
+.astro-code span { color: var(--shiki-light); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .astro-code span { color: var(--shiki-dark); }
+}
+:root[data-theme="dark"] .astro-code span { color: var(--shiki-dark); }
+
+/* Responsive ------------------------------------------------------ */
+@media (max-width: 40rem) {
+  .post-list { margin-top: 2.5rem; }
+  .post-item { grid-template-columns: 1fr; gap: 0.4rem; padding: 1.5rem 0; }
+  .post-item__date { line-height: 1.5; }
+  .post-item__title { font-size: 1.3rem; }
+  .prose { margin-top: 2rem; }
+  .prose h2 { font-size: 1.5rem; }
+  .prose pre { padding: 0.85rem 1rem; font-size: 0.8125rem; }
+}

@@ -1,0 +1,44 @@
+---
+import { render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Tags from '../../../components/Tags.astro';
+import { getPublishedPosts, formatDate, type Post } from '../../../utils/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props as { post: Post };
+const { Content } = await render(post);
+---
+<Base
+  title={`${post.data.title}, Ali Asgar Padaria`}
+  description={post.data.description}
+  root="/"
+  brandHref="/"
+  nav={[
+    { label: 'Projects', href: '/index.html#projects' },
+    { label: 'Blog', href: '/blog/' },
+  ]}
+>
+  <link slot="head" rel="stylesheet" href="/blog.css">
+
+  <main class="site-main" id="main">
+    <article class="post">
+      <header class="post__header">
+        <p class="post__back"><a href="/blog/">All posts</a></p>
+        <h1 class="post__title">{post.data.title}</h1>
+        <p class="post__meta">
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          {post.data.draft && <span class="post__draft">Draft</span>}
+        </p>
+        <Tags tags={post.data.tags} />
+      </header>
+
+      <div class="prose">
+        <Content />
+      </div>
+    </article>
+  </main>
+</Base>
