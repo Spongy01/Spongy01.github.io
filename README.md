@@ -18,6 +18,8 @@ npm run check     # type-check .astro and .ts files
 
 ## Writing a post
 
+Posts live on the long-lived `blogs` branch, which merges straight into `master`. Code changes go through `dev` instead.
+
 Add a Markdown file to `src/content/blog/`. The file name becomes the URL: `my-post.md` is served at `/blog/my-post/`.
 
 ````md

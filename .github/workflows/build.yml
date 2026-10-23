@@ -4,7 +4,7 @@ name: Build check
 
 on:
   push:
-    branches: ["dev", "feature/**"]
+    branches: ["dev", "feature/**", "blogs"]
   pull_request:
   workflow_dispatch:
 
