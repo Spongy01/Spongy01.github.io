@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { projects, type Project } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+
+const { project } = Astro.props as { project: Project };
+---
+<Base
+  title={`${project.name}, Ali Asgar Padaria`}
+  description={`${project.name}, a project by Ali Asgar Padaria.`}
+  root="../"
+  brandHref="../index.html"
+  nav={[{ label: 'Projects', href: '../index.html#projects' }]}
+>
+    <main class="site-main" id="main">
+      <section class="placeholder" aria-labelledby="project-title">
+        <h1 class="placeholder__title" id="project-title">{project.name}</h1>
+        <p class="placeholder__soon">A longer write-up is coming soon.</p>
+        <p class="placeholder__links">
+          <a href={project.repo}>GitHub repository</a>
+          <a href="../index.html#projects">Back to projects</a>
+        </p>
+      </section>
+    </main>
+</Base>
