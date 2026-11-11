@@ -7,12 +7,12 @@
   --font-sans: "Hanken Grotesk", "Helvetica Neue", Helvetica, sans-serif;
 
   /* light: stone paper, ink, ultramarine */
-  --bg: #f6f5f0;
-  --surface: #e9e8e1;
+  --bg: #f8f1e4;
+  --surface: #ede3d0;
   --text: #1c1b19;
-  --muted: #66645e;
+  --muted: #6c6353;
   --accent: #2c3bb3;
-  --rule: #d5d4cc;
+  --rule: #dcd0b8;
 
   --measure: 46rem;   /* main column */
   --prose: 36rem;     /* paragraph width, ~65 characters */
