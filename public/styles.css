@@ -152,6 +152,14 @@ a:hover { color: var(--accent); }
 }
 .theme-toggle:hover { border-color: var(--text); }
 .theme-toggle svg { width: 1rem; height: 1rem; }
+/* Theme wave: JS animates the new snapshot's clip-path; disable the default cross-fade. */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+/* The transition lasts as long as the group animation (default 0.25s) — keep it
+   alive; script.js ends it when the wave finishes. */
+::view-transition-group(root) { animation-duration: 30s; }
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
+
 .theme-toggle .icon-sun { display: none; }
 .theme-toggle[data-mode="dark"] .icon-sun { display: block; }
 .theme-toggle[data-mode="dark"] .icon-moon { display: none; }
