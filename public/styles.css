@@ -218,6 +218,30 @@ a:hover { color: var(--accent); }
 .rail__papers .note__title { margin-bottom: 0.75rem; }
 
 .rail--note .rail__inner { max-width: 17rem; }
+
+/* Animated wave panel under the note (see waves.js). */
+.waves {
+  margin-top: 2.5rem;
+  height: 360px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.waves canvas { display: block; width: 100%; height: 100%; }
+.waves { position: relative; }
+.waves__text {
+  position: absolute;
+  top: 30px;
+  left: 1.5rem;
+  right: 1.5rem;
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 0.9;
+  text-align: center;
+  color: var(--text);
+  opacity: 0.65;
+}
 .note__title {
   font-family: var(--font-display);
   font-style: italic;

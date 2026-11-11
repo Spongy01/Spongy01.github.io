@@ -26,6 +26,11 @@ import Base from '../layouts/Base.astro';
         <!-- Edit this note: what you are exploring or working on right now. -->
         <p class="note__body">Shipping BrokeNoMore as a package. It will be fun, but more than that, jobs now need you to do something like this 😭</p>
         <p class="note__body">P.S. Should I change the name?</p>
+
+        <div class="waves">
+          <canvas aria-hidden="true"></canvas>
+          <p class="waves__text">Something coming here soon!</p>
+        </div>
       </div>
     </aside>
 
@@ -490,4 +495,5 @@ import Base from '../layouts/Base.astro';
       </div>
     </footer>
 
+    <script is:inline src="waves.js"></script>
 </Base>
