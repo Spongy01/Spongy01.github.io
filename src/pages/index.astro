@@ -24,9 +24,9 @@ import Base from '../layouts/Base.astro';
 
         <p class="note__title" id="note-title">Currently</p>
         <!-- Edit this note: what you are exploring or working on right now. -->
-        <p class="note__body">Shipping Conduit on AWS right now. It's the fun kind of work, with a few things I'm figuring out as I go.</p>
-        <p class="note__body">Once it's up, I might leave an open URL right here for a while so you can try it yourself. If it's down or acting weird when you visit, that's probably me poking at it.</p>
+        <p class="note__body">Recently shipped Conduit to AWS. I might put up a link here soon so you can connect to models through it yourself. Sounds fun, so we'll see!</p>
         <!-- When the URL is ready, add it as a link in the paragraph above. -->
+        <p class="note__body">Currently reading: The First Three Minutes by Steven Weinberg.</p>
 
         <div class="waves">
           <canvas aria-hidden="true"></canvas>
@@ -104,16 +104,21 @@ import Base from '../layouts/Base.astro';
         <article class="project reveal" aria-labelledby="project-conduit">
           <div class="project__visual">
             <svg class="diagram" viewBox="0 0 320 224" role="img" aria-labelledby="conduit-diagram-title">
-              <title id="conduit-diagram-title">Clients send requests through Conduit, which rate limits, routes, and traces them before forwarding to OpenAI, Anthropic, or Ollama, with metrics flowing to Prometheus and Grafana.</title>
+              <title id="conduit-diagram-title">Apps over HTTP and the conduit-cli terminal client send requests through Conduit, which rate limits, routes, and traces them before forwarding to OpenAI, Anthropic, or Ollama, with metrics flowing to Prometheus and Grafana.</title>
               <defs>
                 <marker id="arrow-conduit" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                   <path d="M0 0.5 L7.5 4 L0 7.5 Z"/>
                 </marker>
               </defs>
-              <!-- clients -->
-              <rect class="stroke" x="8" y="94" width="60" height="34" rx="2"/>
-              <text class="label" x="38" y="115" text-anchor="middle">Clients</text>
-              <line class="stroke" x1="68" y1="111" x2="104" y2="111" marker-end="url(#arrow-conduit)"/>
+              <!-- clients: apps over HTTP, and the terminal CLI -->
+              <rect class="stroke" x="4" y="54" width="66" height="34" rx="2"/>
+              <text class="label" x="37" y="68" text-anchor="middle">Apps</text>
+              <text class="label--muted" x="37" y="80" text-anchor="middle">HTTP API</text>
+              <line class="stroke" x1="70" y1="71" x2="104" y2="71" marker-end="url(#arrow-conduit)"/>
+              <rect class="stroke--accent" x="4" y="134" width="66" height="34" rx="2"/>
+              <text class="label" x="37" y="148" text-anchor="middle">conduit-cli</text>
+              <text class="label--muted" x="37" y="160" text-anchor="middle">terminal</text>
+              <line class="stroke" x1="70" y1="151" x2="104" y2="151" marker-end="url(#arrow-conduit)"/>
               <!-- gateway -->
               <rect class="stroke--accent" x="106" y="46" width="108" height="130" rx="3"/>
               <text class="label--strong" x="160" y="68" text-anchor="middle" font-size="12">Conduit</text>
@@ -141,8 +146,8 @@ import Base from '../layouts/Base.astro';
           </div>
           <div class="project__text">
             <h3 class="project__title" id="project-conduit">Conduit</h3>
-            <p class="project__stack">Python, FastAPI, Redis, PostgreSQL, OpenTelemetry, Prometheus, Grafana, Docker</p>
-            <p class="project__desc">A production-grade LLM API gateway supporting OpenAI, Anthropic, and Ollama, sustaining 100 RPS with under 2ms p95 overhead, distributed Redis-Lua rate limiting with zero quota leakage under load, and a full observability stack (12 custom Prometheus metrics, OpenTelemetry tracing with 22 spans per request) visualized in Grafana.</p>
+            <p class="project__stack">Python, FastAPI, Redis, PostgreSQL, OpenTelemetry, Prometheus, Grafana, Docker, AWS (EC2), Nginx, Tailscale</p>
+            <p class="project__desc">A production-grade LLM API gateway, deployed on AWS behind an Nginx allowlist front door exposed publicly through Tailscale Funnel, supporting OpenAI, Anthropic, and Ollama, sustaining 100 RPS with under 2ms p95 overhead, distributed Redis-Lua rate limiting with zero quota leakage under load, and a full observability stack (12 custom Prometheus metrics, OpenTelemetry tracing with 22 spans per request) visualized in Grafana. Also ships conduit-cli, a Python terminal client for chatting with any model behind the gateway, interactively or piped into shell scripts.</p>
             <p class="project__links">
               <a href="https://github.com/Spongy01/Conduit">GitHub repository</a>
               <a href="projects/conduit.html">Read more</a>
