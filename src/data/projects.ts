@@ -7,6 +7,7 @@ export interface Project {
 
 export const projects: Project[] = [
   { slug: 'conduit', name: 'Conduit', repo: 'https://github.com/Spongy01/Conduit' },
+  { slug: 'draftly', name: 'Draftly', repo: 'https://github.com/Spongy01/Draftly' },
   { slug: 'brokenomore', name: 'BrokeNoMore', repo: 'https://github.com/Spongy01/BrokeNoMore' },
   { slug: 'cardiology-qa', name: 'Cardiology LLM Fine-Tuning', repo: 'https://github.com/Spongy01/Cardiology-QA' },
   { slug: 'pdf-to-latex', name: 'PDF to LaTeX', repo: 'https://github.com/Spongy01/pdf-2-latex' },

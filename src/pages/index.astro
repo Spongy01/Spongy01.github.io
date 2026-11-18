@@ -155,6 +155,43 @@ import Base from '../layouts/Base.astro';
           </div>
         </article>
 
+        <!-- Draftly -->
+        <article class="project reveal" aria-labelledby="project-draftly">
+          <div class="project__visual">
+            <svg class="diagram" viewBox="0 0 320 224" role="img" aria-labelledby="draftly-diagram-title">
+              <title id="draftly-diagram-title">A dashboard with My documents and Shared with me lists; shared documents carry Editor or Viewer role badges.</title>
+              <rect class="stroke--accent" x="30" y="8" width="260" height="208" rx="4"/>
+              <text class="label--strong" x="44" y="30">My documents</text>
+              <rect class="stroke" x="44" y="38" width="232" height="26" rx="2"/>
+              <text class="label" x="54" y="55">Welcome to Draftly</text>
+              <text class="label--muted" x="268" y="55" text-anchor="end">edited today</text>
+              <rect class="stroke" x="44" y="70" width="232" height="26" rx="2"/>
+              <text class="label" x="54" y="87">Project notes</text>
+              <text class="label--muted" x="268" y="87" text-anchor="end">imported .md</text>
+              <line class="stroke" x1="44" y1="112" x2="276" y2="112" opacity="0.3"/>
+              <text class="label--strong" x="44" y="132">Shared with me</text>
+              <rect class="stroke" x="44" y="140" width="232" height="26" rx="2"/>
+              <text class="label" x="54" y="157">Meeting agenda</text>
+              <rect class="stroke--accent" x="206" y="146" width="56" height="14" rx="7"/>
+              <text class="label" x="234" y="156" text-anchor="middle" font-size="9.5">Editor</text>
+              <rect class="stroke" x="44" y="172" width="232" height="26" rx="2"/>
+              <text class="label" x="54" y="189">Q4 plan</text>
+              <rect class="stroke" x="206" y="178" width="56" height="14" rx="7"/>
+              <text class="label--muted" x="234" y="188" text-anchor="middle" font-size="9.5">Viewer</text>
+            </svg>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title" id="project-draftly">Draftly</h3>
+            <p class="project__stack">Next.js, TypeScript, PostgreSQL (Neon), Prisma, TipTap, Vercel</p>
+            <p class="project__desc">A collaborative document editor with rich-text editing, debounced autosave, and per-document sharing as viewer or editor. Authorization runs through a single pure access function enforced in every route, with identical 404s for missing and forbidden documents so IDs can't be probed, and all saved HTML passes through an allowlist sanitizer. Supports importing .txt, .md, and .docx files as new documents.</p>
+            <p class="project__links">
+              <a href="https://github.com/Spongy01/Draftly">GitHub repository</a>
+              <a href="https://draftly-eight-livid.vercel.app/login">Live demo</a>
+              <a href="projects/draftly.html">Read more</a>
+            </p>
+          </div>
+        </article>
+
         <!-- BrokeNoMore -->
         <article class="project reveal" aria-labelledby="project-brokenomore">
           <div class="project__visual">
